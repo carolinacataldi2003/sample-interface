@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --tv-up: #089981;
+    --tv-down: #f23645;
+    --tv-blue: #2962ff;
+    --tv-border: #e0e3eb;
+    --tv-bg-light: #f8f9fd;
+    --tv-text-primary: #131722;
+    --tv-text-secondary: #787b86;
+  }
+
+  .dark {
+    --tv-border: #2a2e39;
+    --tv-bg-light: #131722;
+    --tv-text-primary: #d1d4dc;
+    --tv-text-secondary: #787b86;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Ubuntu, sans-serif;
+    color: var(--tv-text-primary);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+.font-mono-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Subtle price tick flash animations */
+@keyframes flashGreen {
+  0% { background-color: rgba(8, 153, 129, 0.28); }
+  100% { background-color: transparent; }
+}
+
+@keyframes flashRed {
+  0% { background-color: rgba(242, 54, 69, 0.28); }
+  100% { background-color: transparent; }
+}
+
+.tick-flash-up {
+  animation: flashGreen 0.7s ease-out;
+}
+
+.tick-flash-down {
+  animation: flashRed 0.7s ease-out;
+}

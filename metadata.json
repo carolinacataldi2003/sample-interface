@@ -1,0 +1,6 @@
+{
+  "name": "TradingView Markets Hub",
+  "description": "Panoramica completa e in tempo reale dei mercati finanziari globali: indici, azioni, criptovalute, materie prime, forex, calendario economico e mappa termica interattiva.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
